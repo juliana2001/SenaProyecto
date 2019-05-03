@@ -1,0 +1,94 @@
+*{
+	text-decoration: none;
+}
+body{
+	background-color: #dfe2e5;
+}
+body td{
+	background-color: rgb(60, 88, 162);
+	color: white;
+}
+
+body th{
+	color: white;
+}
+/* estilos login */
+
+.padreLogin{
+	margin: 10%;
+}
+.DatosIncorrectos{
+	color: white;
+}
+
+.login{
+	width: 50%;
+	height: 57vh;
+	margin:  0 auto;
+	box-shadow: 4px 4px #7f8c8d;
+	background-color: rgb(60, 88, 162);
+}
+
+.login h2{
+	text-align: center;
+	color: white;
+}
+
+.login label{
+	color: white;
+}
+
+.enviar{
+	margin-bottom: 1%;
+}
+
+.cancelar{
+	text-decoration: none;
+	color: white;
+}
+
+/* clases registro*/
+
+.padreRegistro{
+	margin: 10%;
+}
+.DatosRepetidos{
+	color: red;
+}
+
+.registro{
+	width: 50%;
+	height: 92vh;
+	margin:  0 auto;
+	box-shadow: 4px 4px #7f8c8d;
+	background-color: rgb(60, 88, 162);
+}
+
+.registro h2{
+	text-align: center;
+	color: white;
+}
+
+.registro label{
+	color: white;
+}
+
+.registrarse{
+	margin-bottom: 1%;
+}
+
+.cancelar{
+	text-decoration: none;
+	color: white;
+}
+
+.form-group p{
+	color: white;
+}
+
+/* clases lista usuarios*/
+
+.ListaUsuarios{
+	margin: 0 auto;
+	background-color: rgb(60, 88, 162);
+}

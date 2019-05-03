@@ -1,0 +1,459 @@
+*
+	outline: 0 !important
+	text-decoration: none
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+
+.container-fluid
+	padding-right: 0px
+	padding-left: 0px
+
+body
+	overflow-x: hidden
+
+%caja
+	width: 100%
+	height: 100vh
+
+//Mostrar menu
+.mostrar
+	display: flex !important
+	transition: ease-in-out 0.15s
+	overflow-y: hidden
+
+//Menu
+header
+	.menuHamburgesa
+		position: absolute
+		z-index: 999
+		display: flex
+		right: 1%
+		margin: 10px
+		transition: ease-in-out 0.15s
+		.fa-bars
+			font-size: 3em
+			cursor: pointer
+		.fa-times
+			font-size: 3em
+			cursor: pointer
+	.menu
+		width: 100%
+		height: 100vh
+		position: absolute
+		z-index: 99
+		display: none
+		text-align: center
+		flex-flow: column
+		background-color: #dfe2e5
+		h2
+			font-size: 2em
+			color: #3c58a2
+			padding: 20px	
+
+//Inicio
+#inicio
+	@extend %caja
+	overflow-y: hidden
+//Fin Inicio
+//Afica
+#africa
+	@extend %caja
+	background: url(../img/africa/fondoAfrica.png) no-repeat
+	background-size: 100%
+	background-attachment: fixed
+	position: relative
+	.menuMultimediaA
+		position: absolute
+		right: 0
+		left: 0
+		bottom: 20px 
+		.btn-primary
+			margin: 20px
+			color: black
+			background-color: rgba(236, 240, 241,0.5)
+			border: none
+			height: 65px
+			width: 120px
+			i
+				font-size: 2em
+			h3
+				font-size: 1em
+	.nubesAfrica
+		position: absolute
+		.animacionNube1A
+			animation-name: nubeAfrica1
+			animation-duration: 15s
+			animation-timing-fuction: linear
+			animation-iteration-count: infinite
+			@keyframes nubeAfrica1
+				from
+					transform: translate(940px, 100px)
+
+				to
+					transform: translate(1366px, 450px)
+		.animacionNube2A
+			animation-name: nubeAfrica1
+			animation-duration: 7s
+			animation-timing-fuction: linear
+			animation-iteration-count: infinite
+			@keyframes nubeAfrica1
+				from
+					transform: translateX(200px)
+				to
+					transform: translateX(1000px)
+		.animacionNube3A
+			animation-name: nubeAfrica1
+			animation-duration: 10s
+			animation-timing-fuction: linear
+			animation-iteration-count: infinite
+			@keyframes nubeAfrica1
+				from
+					transform: translateX(0px)
+				to
+					transform: translateX(100px)
+		.animacionNube4A
+			animation-name: nubeAfrica1
+			animation-duration: 14s
+			animation-timing-fuction: linear
+			animation-iteration-count: infinite
+			@keyframes nubeAfrica1
+				from
+					transform: translateX(0px)
+				to
+					transform: translateX(1000px)
+//Fin Afica
+//Grecia
+#grecia
+	@extend %caja
+	background: url(../img/grecia/fondoGrecia.png) no-repeat
+	background-size: 100%
+	background-attachment: fixed
+	position: relative
+	.menuMultimediaA
+		position: absolute
+		right: 0
+		left: 0
+		bottom: 20px 
+		.btn-primary
+			margin: 20px
+			color: black
+			background-color: rgba(236, 240, 241,0.5)
+			border: none
+			height: 65px
+			width: 120px
+			i
+				font-size: 2em
+			h3
+				font-size: 1em
+	.nubesGrecia
+		position: absolute
+		.animacionNube1G
+				animation-name: nubeGrecia1
+				animation-duration: 8s
+				animation-timing-fuction: linear
+				animation-iteration-count: infinite
+				@keyframes nubeGrecia1
+					from
+						transform: translateX(200px)
+					to
+						transform: translateX(1000px)
+		.animacionNube2G
+				animation-name: nubeGrecia2
+				animation-duration: 15s
+				animation-timing-fuction: linear
+				animation-iteration-count: infinite
+				@keyframes nubeGrecia2
+					from
+						transform: translateX(200px)
+					to
+						transform: translateX(1000px)
+		.animacionNube3G
+				animation-name: nubeGrecia3
+				animation-duration: 12s
+				animation-timing-fuction: linear
+				animation-iteration-count: infinite
+				@keyframes nubeGrecia3
+					from
+						transform: translateX(200px)
+					to
+						transform: translateX(1000px)
+		.animacionNube4G
+				animation-name: nubeGrecia4
+				animation-duration: 10s
+				animation-timing-fuction: linear
+				animation-iteration-count: infinite
+				@keyframes nubeGrecia4
+					from
+						transform: translateX(0px)
+					to
+						transform: translateX(1000px)
+//Fin Grecia
+//Inglaterra
+#inglaterra
+	@extend %caja
+	background: url(../img/inglaterra/fondoInglaterra.png) no-repeat
+	background-size: 100%
+	background-attachment: fixed
+	position: relative
+	.menuMultimediaA
+		position: absolute
+		right: 0
+		left: 0
+		bottom: 20px 
+		.btn-primary
+			margin: 20px
+			color: black
+			background-color: rgba(236, 240, 241,0.5)
+			border: none
+			height: 65px
+			width: 120px
+			i
+				font-size: 2em
+			h3
+				font-size: 1em
+	.nubesInglaterra
+		position: absolute
+		.animacionNube1I
+			animation-name: nubeInglaterra1
+			animation-duration: 7s
+			animation-timing-fuction: linear
+			animation-iteration-count: infinite
+			@keyframes nubeInglaterra1
+				from
+					transform: translateX(200px)
+				to
+					transform: translateX(1000px)
+		.animacionNubeI2
+			animation-name: nubeInglaterra2
+			animation-duration: 10s
+			animation-timing-fuction: linear
+			animation-iteration-count: infinite
+			@keyframes nubeInglaterra2
+				from
+					transform: translateX(0px)
+				to
+					transform: translateX(1000px)
+		.animacionNube3I
+			animation-name: nubeInglaterra3
+			animation-duration: 14s
+			animation-timing-fuction: linear
+			animation-iteration-count: infinite
+			@keyframes nubeInglaterra3
+				from
+					transform: translateX(0px)
+				to
+					transform: translateX(1000px)
+//Fin Inglaterra
+//EstadosUnidos
+#estadosUnidos
+	@extend %caja
+	background: url(../img/estadosUnidos/fondoEstadosUnidos.png) no-repeat
+	background-size: 100%
+	background-attachment: fixed
+	position: relative
+	.menuMultimediaA
+		position: absolute
+		right: 0
+		left: 0
+		bottom: 20px 
+		.btn-primary
+			margin: 20px
+			color: black
+			background-color: rgba(236, 240, 241,0.5)
+			border: none
+			height: 65px
+			width: 120px
+			i
+				font-size: 2em
+			h3
+				font-size: 1em
+	.nubesEstadosUnidos
+		position: absolute
+		.animacionNube1E
+				animation-name: nubeEstadosUnidos1
+				animation-duration: 15s
+				animation-timing-fuction: linear
+				animation-iteration-count: infinite
+				@keyframes nubeEstadosUnidos1
+					from
+						transform: translateX(200px)
+					to
+						transform: translateX(1000px)
+		.animacionNube2E
+				animation-name: nubeEstadosUnidos2
+				animation-duration: 9s
+				animation-timing-fuction: linear
+				animation-iteration-count: infinite
+				@keyframes nubeEstadosUnidos2
+					from
+						transform: translateX(200px)
+					to
+						transform: translateX(1000px)
+		.animacionNube3E
+				animation-name: nubeEstadosUnidos3
+				animation-duration: 8s
+				animation-timing-fuction: linear
+				animation-iteration-count: infinite
+				@keyframes nubeEstadosUnidos3
+					from
+						transform: translateX(200px)
+					to
+						transform: translateX(1000px)
+		.animacionNube4E
+				animation-name: nubeEstadosUnidos4
+				animation-duration: 10s
+				animation-timing-fuction: linear
+				animation-iteration-count: infinite
+				@keyframes nubeEstadosUnidos4
+					from
+						transform: translateX(0px)
+					to
+						transform: translateX(1000px)
+//Fin Estados Unidos
+//Colombia
+#colombia
+	@extend %caja
+	background: url(../img/colombia/fondoColombia.png) no-repeat
+	background-size: 100%
+	position: relative
+	background-attachment: fixed
+	.menuMultimediaA
+		position: absolute
+		right: 0
+		left: 0
+		bottom: 20px 
+		.btn-primary
+			margin: 20px
+			color: black
+			background-color: rgba(236, 240, 241,0.5)
+			border: none
+			height: 65px
+			width: 120px
+			i
+				font-size: 2em
+			h3
+				font-size: 1em
+	.extrellasColombia
+		position: absolute
+		.animacionExtrella1C
+			animation-name: extrellaColombia1
+			animation-duration: 10s
+			animation-timing-fuction: linear
+			animation-iteration-count: infinite
+			transform: translate(180px, 200px)
+			@keyframes extrellaColombia1
+				25%
+					opacity: 1
+				50%
+					opacity: 0
+				75%
+					opacity: 1
+				100%
+					opacity: 0
+		.animacionExtrella2C
+			animation-name: extrellaColombia2
+			animation-duration: 3s
+			animation-timing-fuction: linear
+			animation-iteration-count: infinite
+			transform: translate(125px, 41px)
+			@keyframes extrellaColombia2
+				25%
+					opacity: 1
+				50%
+					opacity: 0
+				75%
+					opacity: 1
+				100%
+					opacity: 0
+		.animacionExtrella3C
+			animation-name: extrellaColombia3
+			animation-duration: 7s
+			animation-timing-fuction: linear
+			animation-iteration-count: infinite
+			transform: translate(450px, 65px)
+			@keyframes extrellaColombia3
+				25%
+					opacity: 1
+				50%
+					opacity: 0
+				75%
+					opacity: 1
+				100%
+					opacity: 0
+		.animacionExtrella4C
+			animation-name: extrellaColombia4
+			animation-duration: 8s
+			animation-timing-fuction: linear
+			animation-iteration-count: infinite
+			transform: translate(320px, 230px)
+			@keyframes extrellaColombia4
+				25%
+					opacity: 1
+				50%
+					opacity: 0
+				75%
+					opacity: 1
+				100%
+					opacity: 0
+		.animacionExtrella5C
+			animation-name: extrellaColombia5
+			animation-duration: 3s
+			animation-timing-fuction: linear
+			animation-iteration-count: infinite
+			transform: translate(700px, 65px)
+			@keyframes extrellaColombia5
+				25%
+					opacity: 1
+				50%
+					opacity: 0
+				75%
+					opacity: 1
+				100%
+					opacity: 0
+		.animacionExtrella6C
+			animation-name: extrellaColombia6
+			animation-duration: 5s
+			animation-timing-fuction: linear
+			animation-iteration-count: infinite
+			transform: translate(520px, 175px)
+			@keyframes extrellaColombia6
+				25%
+					opacity: 1
+				50%
+					opacity: 0
+				75%
+					opacity: 1
+				100%
+					opacity: 0
+		.animacionExtrella7C
+			animation-name: extrellaColombia7
+			animation-duration: 8s
+			animation-timing-fuction: linear
+			animation-iteration-count: infinite
+			transform: translate(820px, 192px)
+			@keyframes extrellaColombia7
+				25%
+					opacity: 1
+				50%
+					opacity: 0
+				75%
+					opacity: 1
+				100%
+					opacity: 0
+		.animacionExtrella8C
+			animation-name: extrellaColombia8
+			animation-duration: 10s
+			animation-timing-fuction: linear
+			animation-iteration-count: infinite
+			transform: translate(940px, 100px)
+			@keyframes extrellaColombia8
+				25%
+					opacity: 1
+				50%
+					opacity: 0
+				75%
+					opacity: 1
+				100%
+					opacity: 0
+//Fin Colombia

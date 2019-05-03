@@ -1,0 +1,43 @@
+body{
+	background-color: #dfe2e5;
+	font-family: 'Raleway light';
+}
+
+h3{
+	color: white;
+	text-align: center;
+	font-family: 'GROBOLD';
+}
+
+hr{
+	background: white;
+	width: 26%;
+}
+.jumbotron{
+	background-color: rgb(60, 88, 162);
+	margin: 8% auto;
+	border-radius: 10px;
+	border: 1px solid white;
+	box-shadow:  6px 4px 6px 0px rgba(0,0,0,0.39);
+}
+
+input{
+	margin-bottom:  10px;
+}
+
+.cancelar{
+	text-decoration: none;
+	color: white;
+}
+
+.enviar{
+	margin-top: 5px;
+}
+textarea{
+	min-height: 132px; 
+	max-height: 132px;
+}
+
+a:not([href]):not([tabindex]){
+  color: white;
+}
