@@ -3,8 +3,7 @@
 	require "php/conexion.php";
 	$sql = "SELECT * FROM secciones";
 	$resultado = mysqli_query($conexion, $sql);
-
-
+	$resultado2= mysqli_query($conexion, $sql);
 ?>
 <!DOCTYPE html>
 <html>
@@ -25,44 +24,91 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 <body>
+	<?php 
+		while ($fila = mysqli_fetch_array($resultado2)) {
+
+	?>
+
+	<div class="modal fade" id="m<?= $fila['id']?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLabel"><?= $fila["historia"]?></h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<img src="img/africa/infoDambe.jpg" style="width: 99%;">
+						</div>
+						<div class="modal-footer"></div>
+					</div>
+				</div>
+			</div>
+		<?php 
+		}
+		?>
 	<!-- Menu -->
 	<header>
 		<div class="menuHamburgesa">
-			<i class="fas fa-bars"></i>
+			<i id="menuH" class="fas fa-bars"></i>
 		</div>
 			<nav class="menu justify-content-center">
 				<a href="index.php">
+					<img src="img/icono/btnInicioMenu.png" width="50px">
 					<h2>Inicio</h2>
 				</a>
-				<a href="login.php">
-					<h2>Login</h2>
-				</a>
 				<a href="registro.php">
+					<img src="img/icono/btnRegistroMenu.png" width="50px">
 					<h2>Registro</h2>
 				</a>
 				<a href="secciones.php">
+					<img src="img/icono/btnHistoriaMenu.png" width="50px">
 					<h2>Historia</h2>
 				</a>
-				<a href="ra.html">
-					<h2>Realidad Aumentada</h2>
+				<a href="#">
+					<img src="img/icono/btnJuegoMenu.png" width="50px">
+					<h2>Juego</h2>
 				</a>
 				<a href="contacto.html">
+					<img src="img/icono/btnContactoMenu.png" width="50px">
 					<h2>Contacto</h2>
-				</a>
+				</a>	
 			</nav>
- 	</header>
+	</header>
  	<!-- Fin Menu -->
+ 	<!-- Boton subir -->
+ 	<i class="fas fa-chevron-circle-up"></i>
+ 	<!-- Fin Boton subir -->
 	<!-- Afica -->
 	<?php $row = mysqli_fetch_array($resultado); ?>
 	<section id="africa" class="container-fluid">
+		<!--Carteles-->
+		<div class="carteles">
+			<ul class="imgCartelesA">
+				<li><img src="img/Carteles/A1.png"></li>
+				<li><img src="img/Carteles/A2.png"></li>
+				<li><img src="img/Carteles/A3.png"></li>
+				<li><img src="img/Carteles/A4.png"></li>
+				<li><img src="img/Carteles/A5.png"></li>
+			</ul>
+			<div class="flechas">
+				<div class="FizquierdaA">
+					<i class="fas fa-chevron-circle-left"></i>
+				</div>
+				<div class="FderechaA">
+					<i class="fas fa-chevron-circle-right"></i>
+				</div>
+			</div>
+		</div>
+		<!--Fin Carteles-->
+		<div class="titulo"><img class="animacionTitulo" src="img/pais/Africa.png"></div>
 		<div class="menuMultimediaA">
 			<!--Africa Infografia-->
-			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#africaInfografia">
-				<i class="fas fa-question-circle"></i>
-				<h3>Dambe</h3>
+			<button type="button" class="btnInfografia" data-toggle="modal" data-target="#m1">
 			</button>
 			<!--Modal Africa Infografia-->
-			<div class="modal fade" id="africaInfografia" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<!--<div class="modal fade" id="africaInfografia" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 				<div class="modal-dialog" role="document">
 					<div class="modal-content">
 						<div class="modal-header">
@@ -72,16 +118,14 @@
 							</button>
 						</div>
 						<div class="modal-body">
-							<img src="<?php $row["infografia"] ?>">
+							<img src="img/africa/infoDambe.jpg" style="width: 99%;">
 						</div>
 						<div class="modal-footer"></div>
 					</div>
 				</div>
-			</div>
+			</div>-->
 			<!--Africa Galeria-->
-			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#africaGaleria">
-				<i class="fas fa-images"></i>
-				<h3>Implementos</h3>
+			<button type="button" class="btnImplementos" data-toggle="modal" data-target="#m2">
 			</button>
 			<!--Modal Africa Galeria-->
 			<div class="modal fade" id="africaGaleria" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -94,19 +138,15 @@
 							</button>
 						</div>
 						<div class="modal-body">
-							<img src="img/africa/casco.png">
+							<img src="img/implementos/pera.png" style="width: 99%;">
 							<p><?php echo $row["implementos"] ?></p>
-							<img src="img/africa/guante.png">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam maiores saepe dolorum commodi neque expedita error</p>
 						</div>
 						<div class="modal-footer"></div>
 					</div>
 				</div>
 			</div>
 			<!--Africa Video Reglas-->
-			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#africaReglas">
-				<i class="fas fa-video"></i>
-				<h3>Reglas</h3>
+			<button type="button" class="btnReglas" data-toggle="modal" data-target="#africaReglas">
 			</button>
 			<!--Modal Africa Video Reglas -->
 			<div class="modal fade" id="africaReglas" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -119,74 +159,46 @@
 							</button>
 						</div>
 						<div class="modal-body">
-							<img src="<?php $row["reglas"] ?>">
-						</div>
-						<div class="modal-footer"></div>
-					</div>
-				</div>
-			</div>
-			<!--Africa Juego-->
-			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#africaJuego">
-				<i class="fas fa-gamepad"></i>
-				<h3>Box Country</h3>
-			</button>
-			<!--Modal Africa Juego -->
-			<div class="modal fade" id="africaJuego" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-				<div class="modal-dialog" role="document">
-					<div class="modal-content">
-						<div class="modal-header">
-							<h5 class="modal-title" id="exampleModalLabel">Juego</h5>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-							</button>
-						</div>
-						<div class="modal-body">
-							<img src="img/africa/juego.png">
+							<img src="img/africa/videoHistoria.png" >
 						</div>
 						<div class="modal-footer"></div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="nubesAfrica">
-			<img class="animacionNube1A" src="img/africa/nubeAfrica.png">
-			<img class="animacionNube2A" src="img/africa/nubeAfrica.png">
-			<img class="animacionNube3A" src="img/africa/nubeAfrica.png">
-			<img class="animacionNube4A" src="img/africa/nubeAfrica.png">
+		<div class="nubes">
+			<img class="animacionNube1" src="img/icono/nube.png" width="200px">
+			<img class="animacionNube2" src="img/icono/nube.png" width="300px">
+			<img class="animacionNube3" src="img/icono/nube.png" width="250px">
+			<img class="animacionNube4" src="img/icono/nube.png" width="200px">
 		</div>
 	</section>
 	<!--Fin Africa -->
 	<!--Grecia -->
 	<?php $row = mysqli_fetch_array($resultado); ?>
 	<section id="grecia" class="container-fluid">
-		<div class="menuMultimediaA">
-			<!--Grecia Video-->
-			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#greciaVideo">
-				<i class="fas fa-video"></i>
-				<h3>Historia</h3>
-			</button>
-			<!--Modal Grecia Video-->
-			<div class="modal fade" id="greciaVideo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-				<div class="modal-dialog" role="document">
-					<div class="modal-content">
-						<div class="modal-header">
-							<h5 class="modal-title" id="exampleModalLabel">Historia</h5>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-							</button>
-						</div>
-						<div class="modal-body">
-							<img src="img/africa/videoHistoria.png">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore aperiam aut iusto quae error tempore nisi consequuntur natus magni fugiat illum, repellat minima quibusdam aliquam dolor deserunt repudiandae quas, laboriosam.</p>
-						</div>
-						<div class="modal-footer"></div>
-					</div>
+		<!--Carteles-->
+		<div class="carteles">
+			<ul class="imgCartelesG">
+				<li><img src="img/Carteles/G1.png"></li>
+				<li><img src="img/Carteles/G2.png"></li>
+				<li><img src="img/Carteles/G3.png"></li>
+				<li><img src="img/Carteles/G4.png"></li>
+				<li><img src="img/Carteles/G5.png"></li>
+			</ul>
+			<div class="flechas">
+				<div class="FizquierdaG">
+					<i class="fas fa-chevron-circle-left"></i>
+				</div>
+				<div class="FderechaG">
+					<i class="fas fa-chevron-circle-right"></i>
 				</div>
 			</div>
+		</div>
+		<div class="titulo"><img class="animacionTitulo" src="img/pais/Grecia.png"></div>
+		<div class="menuMultimediaA">
 			<!--Grecia Galeria-->
-			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#greciaGaleria">
-				<i class="fas fa-images"></i>
-				<h3>Implementos</h3>
+			<button type="button" class="btnImplementos" data-toggle="modal" data-target="#greciaGaleria">
 			</button>
 			<!--Modal Grecia Galeria-->
 			<div class="modal fade" id="greciaGaleria" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -199,19 +211,15 @@
 							</button>
 						</div>
 						<div class="modal-body">
-							<img src="img/africa/casco.png">
-							<p><?php $row["implementos"] ?></p>
-							<img src="img/africa/guante.png">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam maiores saepe dolorum commodi neque expedita error</p>
+							<img src="img/implementos/saco.png" style="width: 99%;">
+							<p><?php echo $row["implementos"] ?></p>
 						</div>
 						<div class="modal-footer"></div>
 					</div>
 				</div>
 			</div>
 			<!--Grecia Video Reglas-->
-			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#greciaVideoReglas">
-				<i class="fas fa-video"></i>
-				<h3>Reglas</h3>
+			<button type="button" class="btnReglas" data-toggle="modal" data-target="#greciaVideoReglas">
 			</button>
 			<!--Modal Grecia Video Reglas-->
 			<div class="modal fade" id="greciaVideoReglas" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -224,77 +232,50 @@
 							</button>
 						</div>
 						<div class="modal-body">
-							<img src="<?php $row["reglas"] ?>">
-						</div>
-						<div class="modal-footer"></div>
-					</div>
-				</div>
-			</div>
-			<!--Grecia Juego-->
-			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#greciaJuego">
-				<i class="fas fa-gamepad"></i>
-				<h3>Box Country</h3>
-			</button>
-			<!--Modal Grecia Juego -->
-			<div class="modal fade" id="greciaJuego" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-				<div class="modal-dialog" role="document">
-					<div class="modal-content">
-						<div class="modal-header">
-							<h5 class="modal-title" id="exampleModalLabel">Juego</h5>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-							</button>
-						</div>
-						<div class="modal-body">
-							<img src="img/africa/juego.png">
+							<img src="img/africa/videoHistoria.png">
 						</div>
 						<div class="modal-footer"></div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="nubesGrecia">
-			<img class="animacionNube1G" src="img/grecia/nubeGrecia.png">
-			<img class="animacionNube2G" src="img/grecia/nubeGrecia.png">
-			<img class="animacionNube3G" src="img/grecia/nubeGrecia.png">
-			<img class="animacionNube4G" src="img/grecia/nubeGrecia.png">
+		<div class="nubes">
+			<img class="animacionNube1" src="img/icono/nube.png" width="200px">
+			<img class="animacionNube2" src="img/icono/nube.png" width="300px">
+			<img class="animacionNube3" src="img/icono/nube.png" width="250px">
+			<img class="animacionNube4" src="img/icono/nube.png" width="200px">
 		</div>
 	</section>
 	<!--Fin Grecia -->
 	<!--Inglaterra -->
 	<?php $row = mysqli_fetch_array($resultado); ?>
 	<section id="inglaterra" class="container-fluid">
-		<div class="menuMultimediaA">
-			<!--Inglaterra Video Historia-->
-			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#inglaterraVideo">
-				<i class="fas fa-video"></i>
-				<h3>Historia</h3>
-			</button>
-			<!--Modal Inglaterra Video Historia-->
-			<div class="modal fade" id="inglaterraVideo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-				<div class="modal-dialog" role="document">
-					<div class="modal-content">
-						<div class="modal-header">
-							<h5 class="modal-title" id="exampleModalLabel">Historia</h5>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-							</button>
-						</div>
-						<div class="modal-body">
-							<img src="img/africa/videoHistoria.png">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore aperiam aut iusto quae error tempore nisi consequuntur natus magni fugiat illum, repellat minima quibusdam aliquam dolor deserunt repudiandae quas, laboriosam.</p>
-						</div>
-						<div class="modal-footer"></div>
-					</div>
+		<!--Carteles-->
+		<div class="carteles">
+			<ul class="imgCartelesI">
+				<li><img src="img/Carteles/I1.png"></li>
+				<li><img src="img/Carteles/I2.png"></li>
+				<li><img src="img/Carteles/I3.png"></li>
+				<li><img src="img/Carteles/I4.png"></li>
+				<li><img src="img/Carteles/I5.png"></li>
+			</ul>
+			<div class="flechas">
+				<div class="FizquierdaI">
+					<i class="fas fa-chevron-circle-left"></i>
+				</div>
+				<div class="FderechaI">
+					<i class="fas fa-chevron-circle-right"></i>
 				</div>
 			</div>
+		</div>
+		<div class="titulo"><img class="animacionTitulo" src="img/pais/Inglaterra.png"></div>
+		<div class="menuMultimediaA">
 			<!--Inglaterra Animacion Personajes-->
-			<button type="inglaterraAnimacion" class="btn btn-primary" data-toggle="modal" data-target="#prueba2">
-				<i class="fas fa-file-video"></i>
-				<h3>Personajes</h3>
-			</button>
 			<!--Modal Inglaterra Animacion Personajes-->
-			<div class="modal fade" id="inglaterraAnimacion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<button type="button" class="btnPersonajes" data-toggle="modal" data-target="#personajesInglaterra">
+			</button>
+			<!-- Modal -->
+			<div class="modal fade" id="personajesInglaterra" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 				<div class="modal-dialog" role="document">
 					<div class="modal-content">
 						<div class="modal-header">
@@ -331,9 +312,7 @@
 				</div>
 			</div>
 			<!--Inglaterra Galeria Implementos-->
-			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#inglaterraGaleria">
-				<i class="fas fa-images"></i>
-				<h3>Implementos</h3>
+			<button type="button" class="btnImplementos" data-toggle="modal" data-target="#inglaterraGaleria">
 			</button>
 			<!--Modal Inglaterra Galeria Implementos -->
 			<div class="modal fade" id="inglaterraGaleria" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -346,19 +325,15 @@
 							</button>
 						</div>
 						<div class="modal-body">
-							<img src="img/africa/casco.png">
-							<p><?php $row["implementos"] ?></p>
-							<img src="img/africa/guante.png">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam maiores saepe dolorum commodi neque expedita error</p>
+							<img src="img/implementos/pera.png" style="width: 99%;">
+							<p><?php echo $row["implementos"] ?></p>
 						</div>
 						<div class="modal-footer"></div>
 					</div>
 				</div>
 			</div>
 			<!--Inglaterra Video Reglas-->
-			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#inglaterraVideoReglas">
-				<i class="fas fa-video"></i>
-				<h3>Reglas</h3>
+			<button type="button" class="btnReglas" data-toggle="modal" data-target="#inglaterraVideoReglas">
 			</button>
 			<!--Modal Inglaterra Video Reglas-->
 			<div class="modal fade" id="inglaterraVideoReglas" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -371,73 +346,46 @@
 							</button>
 						</div>
 						<div class="modal-body">
-							<img src="<?php $row["reglas"] ?>">
-						</div>
-						<div class="modal-footer"></div>
-					</div>
-				</div>
-			</div>
-			<!--Inglaterra Juego-->
-			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#inglaterraJuego">
-				<i class="fas fa-gamepad"></i>
-				<h3>Box Country</h3>
-			</button>
-			<!--Modal Inglaterra Juego-->
-			<div class="modal fade" id="inglaterraJuego" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-				<div class="modal-dialog" role="document">
-					<div class="modal-content">
-						<div class="modal-header">
-							<h5 class="modal-title" id="exampleModalLabel">Juego</h5>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-							</button>
-						</div>
-						<div class="modal-body">
-							<img src="img/africa/juego.png">
+							<img src="img/africa/videoHistoria.png" >
 						</div>
 						<div class="modal-footer"></div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="nubesInglaterra">
-			<img class="animacionNube1I" src="img/inglaterra/nubeInglaterra.png">
-			<img class="animacionNube2I" src="img/inglaterra/nubeInglaterra.png">
-			<img class="animacionNube3I" src="img/inglaterra/nubeInglaterra.png">
+		<div class="nubes">
+			<img class="animacionNube1" src="img/icono/nube.png" width="200px">
+			<img class="animacionNube2" src="img/icono/nube.png" width="300px">
+			<img class="animacionNube3" src="img/icono/nube.png" width="250px">
+			<img class="animacionNube4" src="img/icono/nube.png" width="200px">
 		</div>
 	</section>
 	<!--Fin Inglaterra -->
 	<!--Estados Unidos -->
 	<?php $row = mysqli_fetch_array($resultado); ?>
 	<section id="estadosUnidos" class="container-fluid">
-		<div class="menuMultimediaA">
-			<!--Estados Unidos Video Historia-->
-			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#estadosUnidosVideo">
-				<i class="fas fa-video"></i>
-				<h3>Historia</h3>
-			</button>
-			<!--Modal Estados Unidos Video Historia-->
-			<div class="modal fade" id="estadosUnidosVideo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-				<div class="modal-dialog" role="document">
-					<div class="modal-content">
-						<div class="modal-header">
-							<h5 class="modal-title" id="exampleModalLabel">Historia</h5>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-							</button>
-						</div>
-						<div class="modal-body">
-							<img src="img/africa/videoHistoria.png">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore aperiam aut iusto quae error tempore nisi consequuntur natus magni fugiat illum, repellat minima quibusdam aliquam dolor deserunt repudiandae quas, laboriosam.</p>
-						</div>
-						<div class="modal-footer"></div>
-					</div>
+		<!--Carteles-->
+		<div class="carteles">
+			<ul class="imgCartelesEU">
+				<li><img src="img/Carteles/EU1.png"></li>
+				<li><img src="img/Carteles/EU2.png"></li>
+				<li><img src="img/Carteles/EU3.png"></li>
+				<li><img src="img/Carteles/EU4.png"></li>
+				<li><img src="img/Carteles/EU5.png"></li>
+			</ul>
+			<div class="flechas">
+				<div class="FizquierdaEU">
+					<i class="fas fa-chevron-circle-left"></i>
+				</div>
+				<div class="FderechaEU">
+					<i class="fas fa-chevron-circle-right"></i>
 				</div>
 			</div>
+		</div>
+		<div class="titulo"><img class="animacionTitulo" src="img/pais/EEUU.png"></div>
+		<div class="menuMultimediaA">
 			<!--Estados Unidos Personajes-->
-			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#estadosUnidosPersonaje">
-				<i class="fas fa-file-video"></i>
-				<h3>Personajes</h3>
+			<button type="button" class="btnPersonajes" data-toggle="modal" data-target="#estadosUnidosPersonaje">
 			</button>
 			<!--Modal Estados Unidos Personajes-->
 			<div class="modal fade" id="estadosUnidosPersonaje" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -477,9 +425,7 @@
 				</div>
 			</div>
 			<!--Estados Unidos Infografia-->
-			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#estadosUnidosInfografia">
-				<i class="fas fa-question-circle"></i>
-				<h3>Tecnicas</h3>
+			<button type="button" class="btnInfografia" data-toggle="modal" data-target="#estadosUnidosInfografia">
 			</button>
 			<!--Modal Estados Unidos Infografia-->
 			<div class="modal fade" id="estadosUnidosInfografia" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -492,16 +438,14 @@
 							</button>
 						</div>
 						<div class="modal-body">
-							<img src="<?php $row["infografia"] ?>">
+							<img src="img/estadosUnidos/infoTecnicas.jpg" style="width: 99%;">
 						</div>
 						<div class="modal-footer"></div>
 					</div>
 				</div>
 			</div>
 			<!--Estados Unidos Implementos-->
-			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#estadosUnidosImplementos">
-				<i class="fas fa-images"></i>
-				<h3>Implementos</h3>
+			<button type="button" class="btnImplementos" data-toggle="modal" data-target="#estadosUnidosImplementos">
 			</button>
 			<!--Modal Estados Unidos Implementos-->
 			<div class="modal fade" id="estadosUnidosImplementos" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -514,19 +458,15 @@
 							</button>
 						</div>
 						<div class="modal-body">
-							<img src="img/africa/casco.png">
-							<p><?php $row["implementos"] ?></p>
-							<img src="img/africa/guante.png">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam maiores saepe dolorum commodi neque expedita error</p>
+							<img src="img/implementos/saco.png" style="width: 99%;">
+							<p><?php echo $row["implementos"] ?></p>
 						</div>
 						<div class="modal-footer"></div>
 					</div>
 				</div>
 			</div>
 			<!--Video Reglas-->
-			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#estadosUnidosVideoReglas">
-				<i class="fas fa-video"></i>
-				<h3>Reglas</h3>
+			<button type="button" class="btnReglas" data-toggle="modal" data-target="#estadosUnidosVideoReglas">
 			</button>
 			<!-- Modal -->
 			<div class="modal fade" id="estadosUnidosVideoReglas" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -539,74 +479,46 @@
 							</button>
 						</div>
 						<div class="modal-body">
-							<img src="<?php $row["reglas"] ?>">
-						</div>
-						<div class="modal-footer"></div>
-					</div>
-				</div>
-			</div>
-			<!--Estados Unidos Juego-->
-			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#estadosUnidosJuego">
-				<i class="fas fa-gamepad"></i>
-				<h3>Box Country</h3>
-			</button>
-			<!--Modal Estados Unidos Juego-->
-			<div class="modal fade" id="estadosUnidosJuego" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-				<div class="modal-dialog" role="document">
-					<div class="modal-content">
-						<div class="modal-header">
-							<h5 class="modal-title" id="exampleModalLabel">Juego</h5>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-							</button>
-						</div>
-						<div class="modal-body">
-							<img src="img/africa/juego.png">
+							<img src="img/africa/videoHistoria.png" >
 						</div>
 						<div class="modal-footer"></div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="nubesEstadosUnidos">
-			<img class="animacionNube1E" src="img/estadosUnidos/nubeEstadosUnidos.png">
-			<img class="animacionNube2E" src="img/estadosUnidos/nubeEstadosUnidos.png">
-			<img class="animacionNube3E" src="img/estadosUnidos/nubeEstadosUnidos.png">
-			<img class="animacionNube4E" src="img/estadosUnidos/nubeEstadosUnidos.png">
+		<div class="nubes">
+			<img class="animacionNube1" src="img/icono/nube.png" width="200px">
+			<img class="animacionNube2" src="img/icono/nube.png" width="300px">
+			<img class="animacionNube3" src="img/icono/nube.png" width="250px">
+			<img class="animacionNube4" src="img/icono/nube.png" width="200px">
 		</div>
 	</section>
 	<!--Fin Estados Unidos -->
 	<!--Colombia -->
 	<?php $row = mysqli_fetch_array($resultado); ?>
 	<section id="colombia" class="container-fluid">
-		<div class="menuMultimediaA">
-			<!--Video Historia-->
-			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#colombiaVideo">
-				<i class="fas fa-video"></i>
-				<h3>Historia</h3>
-			</button>
-			<!-- Modal -->
-			<div class="modal fade" id="colombiaVideo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-				<div class="modal-dialog" role="document">
-					<div class="modal-content">
-						<div class="modal-header">
-							<h5 class="modal-title" id="exampleModalLabel">Historia</h5>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-							</button>
-						</div>
-						<div class="modal-body">
-							<img src="img/africa/videoHistoria.png">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore aperiam aut iusto quae error tempore nisi consequuntur natus magni fugiat illum, repellat minima quibusdam aliquam dolor deserunt repudiandae quas, laboriosam.</p>
-						</div>
-						<div class="modal-footer"></div>
-					</div>
+		<!--Carteles-->
+		<div class="carteles">
+			<ul class="imgCartelesC">
+				<li><img src="img/Carteles/C1.png"></li>
+				<li><img src="img/Carteles/C2.png"></li>
+				<li><img src="img/Carteles/C3.png"></li>
+				<li><img src="img/Carteles/C4.png"></li>
+				<li><img src="img/Carteles/C5.png"></li>
+			</ul>
+			<div class="flechas">
+				<div class="FizquierdaC">
+					<i class="fas fa-chevron-circle-left"></i>
+				</div>
+				<div class="FderechaC">
+					<i class="fas fa-chevron-circle-right"></i>
 				</div>
 			</div>
+		</div>
+		<div class="titulo"><img class="animacionTitulo" src="img/pais/Colombia.png"></div>
+		<div class="menuMultimediaA">
 			<!--Animacion Personajes-->
-			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#colombiaAnimacion">
-				<i class="fas fa-file-video"></i>
-				<h3>Personajes</h3>
+			<button type="button" class="btnPersonajes" data-toggle="modal" data-target="#colombiaAnimacion">
 			</button>
 			<!-- Modal -->
 			<div class="modal fade" id="colombiaAnimacion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -646,9 +558,7 @@
 				</div>
 			</div>
 			<!--Infografia-->
-			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#colombiaInfografia">
-				<i class="fas fa-question-circle"></i>
-				<h3>Categorias</h3>
+			<button type="button" class="btnInfografia" data-toggle="modal" data-target="#colombiaInfografia">
 			</button>
 			<!-- Modal -->
 			<div class="modal fade" id="colombiaInfografia" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -661,16 +571,14 @@
 							</button>
 						</div>
 						<div class="modal-body">
-							<img src="img/africa/dambeInfo1.jpg">
+							<img src="img/colombia/infoCategorias.jpg" style="width: 99%;">
 						</div>
 						<div class="modal-footer"></div>
 					</div>
 				</div>
 			</div>
 			<!--Galeria Implementos-->
-			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#colombiaGaleria">
-				<i class="fas fa-images"></i>
-				<h3>Implementos</h3>
+			<button type="button" class="btnImplementos" data-toggle="modal" data-target="#colombiaGaleria">
 			</button>
 			<!-- Modal -->
 			<div class="modal fade" id="colombiaGaleria" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -683,19 +591,15 @@
 							</button>
 						</div>
 						<div class="modal-body">
-							<img src="img/africa/casco.png">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam maiores saepe dolorum commodi neque expedita error</p>
-							<img src="img/africa/guante.png">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam maiores saepe dolorum commodi neque expedita error</p>
+							<img src="img/implementos/pera.png" style="width: 99%;">
+							<p><?php echo $row["implementos"] ?></p>
 						</div>
 						<div class="modal-footer"></div>
 					</div>
 				</div>
 			</div>
 			<!--Video Reglas-->
-			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#colombiaVideoReglas">
-				<i class="fas fa-video"></i>
-				<h3>Reglas</h3>
+			<button type="button" class="btnReglas" data-toggle="modal" data-target="#colombiaVideoReglas">
 			</button>
 			<!-- Modal -->
 			<div class="modal fade" id="colombiaVideoReglas" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -714,38 +618,15 @@
 					</div>
 				</div>
 			</div>
-			<!--Juego Box Country-->
-			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#colombiaJuego">
-				<i class="fas fa-gamepad"></i>
-				<h3>Box Country</h3>
-			</button>
-			<!-- Modal -->
-			<div class="modal fade" id="colombiaJuego" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-				<div class="modal-dialog" role="document">
-					<div class="modal-content">
-						<div class="modal-header">
-							<h5 class="modal-title" id="exampleModalLabel">Juego</h5>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-							</button>
-						</div>
-						<div class="modal-body">
-							<img src="img/africa/juego.png">
-						</div>
-						<div class="modal-footer"></div>
-					</div>
-				</div>
-			</div>
 		</div>
 		<div class="extrellasColombia">
-			<img class="animacionExtrella1C" src="img/colombia/extrellaColombia.png">
-			<img class="animacionExtrella2C" src="img/colombia/extrellaColombia.png">
-			<img class="animacionExtrella3C" src="img/colombia/extrellaColombia.png">
-			<img class="animacionExtrella4C" src="img/colombia/extrellaColombia.png">
-			<img class="animacionExtrella5C" src="img/colombia/extrellaColombia.png">
-			<img class="animacionExtrella6C" src="img/colombia/extrellaColombia.png">
-			<img class="animacionExtrella7C" src="img/colombia/extrellaColombia.png">
-			<img class="animacionExtrella8C" src="img/colombia/extrellaColombia.png">
+			<img class="animacionExtrella1C" src="img/colombia/estrella.png" width="5%">
+			<img class="animacionExtrella2C" src="img/colombia/estrella.png" width="5%">
+			<img class="animacionExtrella3C" src="img/colombia/estrella.png" width="5%">
+			<img class="animacionExtrella4C" src="img/colombia/estrella.png" width="5%">
+			<img class="animacionExtrella5C" src="img/colombia/estrella.png" width="5%">
+			<img class="animacionExtrella6C" src="img/colombia/estrella.png" width="5%">
+			<img class="animacionExtrella7C" src="img/colombia/estrella.png" width="5%">
 		</div>
 	</section>
 	<!--Fin Colombia -->
