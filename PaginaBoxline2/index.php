@@ -27,7 +27,7 @@
 	<!-- Menu -->
 	<header>
 		<div class="menuHamburgesa">
-			<i class="menuH fas fa-bars"></i>
+			<i id="menuH" class="fas fa-bars"></i>
 		</div>
 			<nav class="menu justify-content-center">
 				<a href="index.php">

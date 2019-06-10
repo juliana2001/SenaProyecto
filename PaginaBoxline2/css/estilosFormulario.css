@@ -2,7 +2,9 @@
 	text-decoration: none;
 }
 body{
-	background-color: #dfe2e5;
+	background-image: url(../img/fondoFormularios.png);
+	background-size: 100%;
+	overflow: hidden;
 }
 body td{
 	background-color: rgb(60, 88, 162);
@@ -50,7 +52,7 @@ body th{
 /* clases registro*/
 
 .padreRegistro{
-	margin: 10%;
+	margin: 5% 0; 
 }
 .DatosRepetidos{
 	color: red;
@@ -58,9 +60,8 @@ body th{
 
 .registro{
 	width: 50%;
-	height: 92vh;
-	margin:  0 auto;
-	box-shadow: 4px 4px #7f8c8d;
+	margin: 0 auto;
+	box-shadow: 6px 4px 6px 0px rgba(0,0,0,0.39);
 	background-color: rgb(60, 88, 162);
 }
 
@@ -86,6 +87,14 @@ body th{
 	color: white;
 }
 
+hr{
+	width: 21%;
+}
+.btnR{
+	background-image: url(../img/icono/enviar.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
 /* clases lista usuarios*/
 
 .ListaUsuarios{

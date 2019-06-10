@@ -26,10 +26,8 @@
 <body>
 	<?php 
 		while ($fila = mysqli_fetch_array($resultado2)) {
-
 	?>
-
-	<div class="modal fade" id="m<?= $fila['id']?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal fade" id="m<?= $fila['idSec']?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 				<div class="modal-dialog" role="document">
 					<div class="modal-content">
 						<div class="modal-header">
@@ -82,6 +80,7 @@
  	<!-- Fin Boton subir -->
 	<!-- Afica -->
 	<?php $row = mysqli_fetch_array($resultado); ?>
+	
 	<section id="africa" class="container-fluid">
 		<!--Carteles-->
 		<div class="carteles">

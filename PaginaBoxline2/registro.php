@@ -1,6 +1,3 @@
-<?php
-
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -33,14 +30,6 @@
 					<label for="exampleInputEmail2">Ingrese nombre de usuario :</label>
 					<input type="text" class="form-control" name="usuarioR" placeholder="Usuario" required>
 				</div>
-				<div class="form-group">
-					<label for="exampleInputEmail2">Ingrese correo electronico :</label>
-					<input type="mail" class="form-control" name="correo" placeholder="Correo electronico" required>
-				</div>
-				<div class="form-group">
-					<label for="exampleInputEmail2">Ingrese fecha de nacimiento :</label>
-					<input type="date" class="form-control" name="fecha" placeholder="Fecha de nacimiento" required>
-				</div>
 				<div class="DatosIncorrectos">
 					<?php
 					if(isset($_GET["error1"])){
@@ -48,8 +37,8 @@
 					}
 					?>
 				</div>
-				<a href="listaUsuarios.php" class="btn btn-outline-light w-100 registrarse" value="Registrarse">Enviar</a>
-				<a href="index.php" class="btn btn-outline-light w-100 cancelar">Cancelar</a>
+				<a href="listaUsuarios.php" class="btnR registrarse" value="Registrarse">Enviar</a>
+				<a href="index.php" class="btnC w-100 cancelar">Cancelar</a>
 			</form>
 			</div>
 		</div>
