@@ -159,7 +159,7 @@
 			<!--Africa Infografia-->
 			<button type="button" class="btnInfografia" data-toggle="modal" data-target="#infografia1"></button>
 			<!--Africa Galeria-->
-			<button type="button" class="btnImplementos" data-toggle="modal" data-target="#implementoAfrica"></button>
+			<!-- <button type="button" class="btnImplementos" data-toggle="modal" data-target="#implementoAfrica"></button>
 			<div class="modal fade" id="implementoAfrica" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 				<div class="modal-dialog" role="document">
 					<div class="modal-content">
@@ -176,17 +176,17 @@
 							<div class="modal-footer"></div>
 						</div>
 					</div>
-				</div>
-			<!--Africa Video Reglas-->
-			<button type="button" class="btnReglas" data-toggle="modal" data-target="#reglas1"></button>
-		</div>
-		<div class="nubes">
-			<img class="animacionNube1" src="img/icono/nube.png" width="200px">
-			<img class="animacionNube2" src="img/icono/nube.png" width="300px">
-			<img class="animacionNube3" src="img/icono/nube.png" width="250px">
-			<img class="animacionNube4" src="img/icono/nube.png" width="200px">
-		</div>
-	</section>
+				</div> -->
+				<!--Africa Video Reglas-->
+				<button type="button" class="btnReglas" data-toggle="modal" data-target="#reglas1"></button>
+			</div>
+			<div class="nubes">
+				<img class="animacionNube1" src="img/icono/nube.png" width="200px">
+				<img class="animacionNube2" src="img/icono/nube.png" width="300px">
+				<img class="animacionNube3" src="img/icono/nube.png" width="250px">
+				<img class="animacionNube4" src="img/icono/nube.png" width="200px">
+			</div>
+		</section>
 	<!--Fin Africa -->
 	<!--Grecia -->
 	<?php $row = mysqli_fetch_array($resultado); ?>
@@ -209,7 +209,9 @@
 				</div>
 			</div>
 		</div>
-		<div class="titulo"><img class="animacionTitulo" src="img/pais/Grecia.png"></div>
+		<div class="titulo">
+			<img class="animacionTitulo" src="img/pais/Grecia.png">
+		</div>
 		<div class="menuMultimediaA">
 			<!--Grecia Galeria-->
 			<button type="button" class="btnImplementos" data-toggle="modal" data-target="#implementos2"></button>
@@ -223,7 +225,7 @@
 			<img class="animacionNube3" src="img/icono/nube.png" width="250px">
 			<img class="animacionNube4" src="img/icono/nube.png" width="200px">
 		</div>
-	</section>
+		</section>
 	<!--Fin Grecia -->
 	<!--Inglaterra -->
 	<?php $row = mysqli_fetch_array($resultado); ?>
