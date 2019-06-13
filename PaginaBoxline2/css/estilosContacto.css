@@ -25,14 +25,24 @@ hr{
 input{
 	margin-bottom:  10px;
 }
-
+.botones{
+	width: 70%;
+	margin: 0 auto;
+}
 .cancelar{
-	text-decoration: none;
-	color: white;
+	margin: 5px;
+	width: 47%;
 }
 
 .enviar{
-	margin-top: 5px;
+	margin: 5px;
+	width: 47%;
+}
+.enviar img{
+	width: 100%;
+}
+.cancelar img{
+	width: 100%;
 }
 textarea{
 	min-height: 132px; 

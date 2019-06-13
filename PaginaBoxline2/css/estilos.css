@@ -12,7 +12,8 @@
   padding-left: 0px; }
 
 body {
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  font-family: "Raleway light"; }
 
 a {
   text-decoration: none; }
@@ -28,17 +29,17 @@ a {
   background: #dfe2e5; }
 
 ::-webkit-scrollbar-thumb {
-  background: #355ea0;
+  background: #12005c;
   border-radius: 8px; }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #12005c; }
+  background: #ffb142; }
 
 .fa-chevron-circle-up {
   font-size: 3em;
   color: #ffb142;
   position: fixed;
-  z-index: 3;
+  z-index: 10;
   right: 25px;
   bottom: 15px; }
 
@@ -79,9 +80,10 @@ header .menu {
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
-  margin: 5% 0; }
+  margin: 4% 0; }
   header .menu a {
-    padding: 10px; }
+    padding: 10px;
+    text-decoration: none; }
     header .menu a h2 {
       font-size: 1.5em;
       color: white; }

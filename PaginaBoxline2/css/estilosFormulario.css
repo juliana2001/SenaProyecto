@@ -5,6 +5,7 @@ body{
 	background-image: url(../img/fondoFormularios.png);
 	background-size: 100%;
 	overflow: hidden;
+	font-family: 'Raleway light';
 }
 body td{
 	background-color: rgb(60, 88, 162);
@@ -52,7 +53,7 @@ body th{
 /* clases registro*/
 
 .padreRegistro{
-	margin: 5% 0; 
+	margin: 10% 0; 
 }
 .DatosRepetidos{
 	color: red;
@@ -90,11 +91,19 @@ body th{
 hr{
 	width: 21%;
 }
-.btnR{
-	background-image: url(../img/icono/enviar.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
+.botones{
+	width: 70%;
+	margin: 0 auto;
 }
+.btnR img{
+	margin: 5px;
+	width: 45%;
+}
+.btnC img{
+	margin: 5px;
+	width: 45%;
+}
+
 /* clases lista usuarios*/
 
 .ListaUsuarios{

@@ -61,7 +61,7 @@
 					<img src="img/inicio.jpg" class="d-block w-100" alt="fondoInicio">
 				</div>
 				<div class="carousel-item" data-interval="2000">
-					<img src="img/realidadAumentada.png" class="d-block w-100" alt="realidadAumentada">
+					<img src="img/realidadAinicio.png" class="d-block w-100" alt="realidadAumentada">
 				</div>
 				<div class="carousel-item">
 					<video class="d-block w-100" controls autoplay="false">

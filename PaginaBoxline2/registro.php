@@ -37,8 +37,14 @@
 					}
 					?>
 				</div>
-				<a href="listaUsuarios.php" class="btnR registrarse" value="Registrarse">Enviar</a>
-				<a href="index.php" class="btnC w-100 cancelar">Cancelar</a>
+				<div class="botones">
+					<a href="listaUsuarios.php" class="btnR registrarse" value="Registrarse">
+						<img src="img/icono/enviar2.png">
+					</a>
+					<a href="index.php" class="btnC w-100 cancelar">
+						<img src="img/icono/volver.png">
+					</a>
+				</div>
 			</form>
 			</div>
 		</div>
