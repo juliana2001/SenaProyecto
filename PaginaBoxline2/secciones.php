@@ -64,7 +64,7 @@
 					</button>
 				</div>
 				<div class="modal-body">
-					<video class="d-block w-100" controls autoplay="false">
+					<video class="d-block w-100" controls>
 						<source src="<?= $fila2['personaje']?>" type="video/mp4">
 					</video>
 				</div>
@@ -89,7 +89,7 @@
 					</button>
 				</div>
 				<div class="modal-body">
-					<video class="d-block w-100" controls autoplay="false">
+					<video class="d-block w-100" controls ="false">
 						<source src="<?= $fila3['reglas']?>" type="video/mp4">
 					</video>
 				</div>
@@ -110,15 +110,11 @@
 					<img src="img/icono/btnInicioMenu.png" width="50px">
 					<h2>Inicio</h2>
 				</a>
-				<a href="registro.php">
-					<img src="img/icono/btnRegistroMenu.png" width="50px">
-					<h2>Registro</h2>
-				</a>
 				<a href="secciones.php">
 					<img src="img/icono/btnHistoriaMenu.png" width="50px">
 					<h2>Historia</h2>
 				</a>
-				<a href="#">
+				<a href="juego/index.html" target="blank">
 					<img src="img/icono/btnJuegoMenu.png" width="50px">
 					<h2>Juego</h2>
 				</a>
@@ -159,7 +155,7 @@
 			<!--Africa Infografia-->
 			<button type="button" class="btnInfografia" data-toggle="modal" data-target="#infografia1"></button>
 			<!--Africa Galeria-->
-			<!-- <button type="button" class="btnImplementos" data-toggle="modal" data-target="#implementoAfrica"></button>
+			<button type="button" class="btnImplementos" data-toggle="modal" data-target="#implementoAfrica"></button>
 			<div class="modal fade" id="implementoAfrica" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 				<div class="modal-dialog" role="document">
 					<div class="modal-content">
@@ -170,13 +166,21 @@
 							</button>
 						</div>
 						<div class="modal-body">
-							<img src="img/implementos/mano_dambe.png" width="99%">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit modi maiores non consequuntur debitis, ipsam beatae consequatur, voluptatibus corrupti in magni eaque illum odio vero, unde facere voluptate perspiciatis recusandae.</p>
-							<img src="img/implementos/mano_dambe.png" width="99%">
+							<img src="img/implementos/img/mano_dambe.png" class="imgIA" width="99%">
+							<div class="contenedorA">
+								<img src="img/implementos/Carteles/karaA.png" class="textoA" width="99%">
+								<div class="contenedor2">
+									<img src="img/implementos/marcadores/manoDambe.jpg" class="marcadorA" width="99%">
+									<i class="fas fa-volume-down">
+										<audio id="" src="img/implementos/audios/kara.mp3"></audio>
+									</i>
+								</div>
+							</div>
 							<div class="modal-footer"></div>
 						</div>
 					</div>
-				</div> -->
+				</div>
+			</div>
 				<!--Africa Video Reglas-->
 				<button type="button" class="btnReglas" data-toggle="modal" data-target="#reglas1"></button>
 			</div>
@@ -214,7 +218,32 @@
 		</div>
 		<div class="menuMultimediaA">
 			<!--Grecia Galeria-->
-			<button type="button" class="btnImplementos" data-toggle="modal" data-target="#implementos2"></button>
+			<button type="button" class="btnImplementos" data-toggle="modal" data-target="#implementoGrecia"></button>
+			<div class="modal fade" id="implementoGrecia" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLabel">Implementos</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<img src="img/implementos/img/mano_grecia.png" class="imgIA" width="99%">
+							<div class="contenedorA">
+								<img src="img/implementos/Carteles/caestusG.png" class="textoA" width="99%">
+								<div class="contenedor2">
+									<img src="img/implementos/marcadores/manoGrecia.jpg" class="marcadorA" width="99%">
+									<i class="fas fa-volume-down">
+										<audio id="" src="img/implementos/audios/caestus.mp3"></audio>
+									</i>
+								</div>
+							</div>
+							<div class="modal-footer"></div>
+						</div>
+					</div>
+				</div>
+			</div>
 			<!--Grecia Video Reglas-->
 			<button type="button" class="btnReglas" data-toggle="modal" data-target="#reglas2">
 			</button>
@@ -253,7 +282,32 @@
 			<!--Inglaterra Animacion Personajes-->
 			<button type="button" class="btnPersonajes" data-toggle="modal" data-target="#personaje3"></button>
 			<!--Inglaterra Galeria Implementos-->
-			<button type="button" class="btnImplementos" data-toggle="modal" data-target="#implementos3"></button>
+			<button type="button" class="btnImplementos" data-toggle="modal" data-target="#implementoInglaterra"></button>
+			<div class="modal fade" id="implementoInglaterra" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLabel">Implementos</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<img src="img/implementos/img/guante.png" class="imgIA" width="99%">
+							<div class="contenedorA">
+								<img src="img/implementos/Carteles/guanteEIC.png" class="textoA" width="99%">
+								<div class="contenedor2">
+									<img src="img/implementos/marcadores/guante.jpg" class="marcadorA" width="99%">
+									<i class="fas fa-volume-down">
+										<audio id="" src="img/implementos/audios/guantes.mp3"></audio>
+									</i>
+								</div>
+							</div>
+							<div class="modal-footer"></div>
+						</div>
+					</div>
+				</div>
+			</div>
 			<!--Inglaterra Video Reglas-->
 			<button type="button" class="btnReglas" data-toggle="modal" data-target="#reglas3">
 			</button>
@@ -295,7 +349,58 @@
 			<button type="button" class="btnInfografia" data-toggle="modal" data-target="#infografia4">
 			</button>
 			<!--Estados Unidos Implementos-->
-			<button type="button" class="btnImplementos" data-toggle="modal" data-target="#implementos4"></button>
+			<button type="button" class="btnImplementos" data-toggle="modal" data-target="#implementosE"></button>
+			<div class="modal fade" id="implementosE" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLabel">Implementos</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+								<div class="carousel-inner">
+									<div class="carousel-item active">
+										<img src="img/implementos/img/guante.png" class="imgIA" width="99%">
+										<div class="contenedorA">
+											<img src="img/implementos/Carteles/guanteEIC.png" class="textoA" width="99%">
+											<div class="contenedor2">
+												<img src="img/implementos/marcadores/guante.jpg" class="marcadorA" width="99%">
+												<i class="fas fa-volume-down">
+													<audio id="" src="img/implementos/audios/guantes.mp3"></audio>
+												</i>
+											</div>
+										</div>
+									</div>
+									<div class="carousel-item">
+										<img src="img/implementos/img/casco.png" class="imgIA" width="99%">
+										<div class="contenedorA">
+											<img src="img/implementos/Carteles/cascoEC.png" class="textoA" width="99%">
+											<div class="contenedor2">
+												<img src="img/implementos/marcadores/casco.jpg" class="marcadorA" width="99%">
+												<i class="fas fa-volume-down">
+													<audio id="" src="img/implementos/audios/casco.mp3"></audio>
+												</i>
+											</div>
+										</div>
+									</div>
+								</div>
+								<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+									<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+									<span class="sr-only">Previous</span>
+								</a>
+								<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+									<span class="carousel-control-next-icon" aria-hidden="true"></span>
+									<span class="sr-only">Next</span>
+								</a>
+							</div>
+							<div class="modal-footer"></div>
+						</div>
+					</div>
+				</div>
+			</div>
 			<!--Video Reglas-->
 			<button type="button" class="btnReglas" data-toggle="modal" data-target="#reglas4"></button>
 		</div>
@@ -335,7 +440,107 @@
 			<!--Infografia-->
 			<button type="button" class="btnInfografia" data-toggle="modal" data-target="#infografia5"></button>
 			<!--Galeria Implementos-->
-			<button type="button" class="btnImplementos" data-toggle="modal" data-target="#implementos5"></button>
+			<button type="button" class="btnImplementos" data-toggle="modal" data-target="#implementosC"></button>
+			<div class="modal fade" id="implementosC" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLabel">Implementos</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+								<div class="carousel-inner">
+									<div class="carousel-item active">
+										<img src="img/implementos/img/guante.png" class="imgIA" width="99%">
+										<div class="contenedorA">
+											<img src="img/implementos/Carteles/guanteEIC.png" class="textoA" width="99%">
+											<div class="contenedor2">
+												<img src="img/implementos/marcadores/guante.jpg" class="marcadorA" width="99%">
+												<i class="fas fa-volume-down">
+													<audio id="" src="img/implementos/audios/guantes.mp3"></audio>
+												</i>
+											</div>
+										</div>
+									</div>
+									<div class="carousel-item">
+										<img src="img/implementos/img/casco.png" class="imgIA" width="99%">
+										<div class="contenedorA">
+											<img src="img/implementos/Carteles/cascoEC.png" class="textoA" width="99%">
+											<div class="contenedor2">
+												<img src="img/implementos/marcadores/casco.jpg" class="marcadorA" width="99%">
+												<i class="fas fa-volume-down">
+													<audio id="" src="img/implementos/audios/casco.mp3"></audio>
+												</i>
+											</div>
+										</div>
+									</div>
+									<div class="carousel-item">
+										<img src="img/implementos/img/coquilla.png" class="imgIA" width="99%">
+										<div class="contenedorA">
+											<img src="img/implementos/Carteles/coquillaC.png" class="textoA" width="99%">
+											<div class="contenedor2">
+												<img src="img/implementos/marcadores/coquilla.jpg" class="marcadorA" width="99%">
+												<i class="fas fa-volume-down">
+													<audio id="" src="img/implementos/audios/coquilla.mp3"></audio>
+												</i>
+											</div>
+										</div>
+									</div>
+									<div class="carousel-item">
+										<img src="img/implementos/img/bucal.png" class="imgIA" width="99%">
+										<div class="contenedorA">
+											<img src="img/implementos/Carteles/bucalC.png" class="textoA" width="99%">
+											<div class="contenedor2">
+												<img src="img/implementos/marcadores/bucal.jpg" class="marcadorA" width="99%">
+												<i class="fas fa-volume-down">
+													<audio id="" src="img/implementos/audios/bucal.mp3"></audio>
+												</i>
+											</div>
+										</div>
+									</div>
+									<div class="carousel-item">
+										<img src="img/implementos/img/pera.png" class="imgIA" width="99%">
+										<div class="contenedorA">
+											<img src="img/implementos/Carteles/peraC.png" class="textoA" width="99%">
+											<div class="contenedor2">
+												<img src="img/implementos/marcadores/pera.jpg" class="marcadorA" width="99%">
+												<i class="fas fa-volume-down">
+													<audio id="" src="img/implementos/audios/pera.mp3"></audio>
+												</i>
+											</div>
+										</div>
+									</div>
+									<div class="carousel-item">
+										<img src="img/implementos/img/saco_pesado.png" class="imgIA" width="99%">
+										<div class="contenedorA">
+											<img src="img/implementos/Carteles/saco_pesadoC.png" class="textoA" width="99%">
+											<div class="contenedor2">
+												<img src="img/implementos/marcadores/sacoPesado.jpg" class="marcadorA" width="99%">
+												<i class="fas fa-volume-down">
+													<audio id="" src="img/implementos/audios/saco.mp3"></audio>
+												</i>
+											</div>
+										</div>
+									</div>
+								</div>
+								<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+									<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+									<span class="sr-only">Previous</span>
+								</a>
+								<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+									<span class="carousel-control-next-icon" aria-hidden="true"></span>
+									<span class="sr-only">Next</span>
+								</a>
+							</div>
+							<div class="modal-footer"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
 			<!--Video Reglas-->
 			<button type="button" class="btnReglas" data-toggle="modal" data-target="#reglas5"></button>
 		</div>

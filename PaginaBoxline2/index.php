@@ -34,15 +34,11 @@
 					<img src="img/icono/btnInicioMenu.png" width="50px">
 					<h2>Inicio</h2>
 				</a>
-				<a href="registro.php">
-					<img src="img/icono/btnRegistroMenu.png" width="50px">
-					<h2>Registro</h2>
-				</a>
 				<a href="secciones.php">
 					<img src="img/icono/btnHistoriaMenu.png" width="50px">
 					<h2>Historia</h2>
 				</a>
-				<a href="#">
+				<a href="juego/index.html" target="blank">
 					<img src="img/icono/btnJuegoMenu.png" width="50px">
 					<h2>Juego</h2>
 				</a>
@@ -61,11 +57,14 @@
 					<img src="img/inicio.jpg" class="d-block w-100" alt="fondoInicio">
 				</div>
 				<div class="carousel-item" data-interval="2000">
+					<div class="textoRA">
+						<button class="btnDescargar"><a href="RA/BoxLine_RA.apk" download><img src="img/icono/descargar2.png"></a></button>
+					</div> 
 					<img src="img/realidadAinicio.png" class="d-block w-100" alt="realidadAumentada">
 				</div>
 				<div class="carousel-item">
-					<video class="d-block w-100" controls autoplay="false">
-						<source src="img/BoxLine.mp4" type="video/mp4">
+					<video class="d-block w-100" controls>
+						<source src="img/animacionBoxlinePrincipal.mp4" type="video/mp4">
 					</video>
 				</div>
 			</div>

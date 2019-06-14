@@ -194,8 +194,10 @@ $(document).ready(function(){
 		$('.imgCartelesC li:nth-child('+ imgPos +')').fadeIn();
 	}
 
-
-
+	//Audios
+	$('.fa-volume-down').click(function(){
+		$(".fa-volume-down").find("audio")[0].play();
+	});
 
 
 	
