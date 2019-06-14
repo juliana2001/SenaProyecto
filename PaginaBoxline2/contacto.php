@@ -49,7 +49,7 @@ mail($to, $asunto, $mensaje, $tipoContenido);
 <body>
 	<div class="text-center">
 		<h1 class="display-2 "> ¡Gracias por tu comentario! </h1>
-			<a href="index.php" class="btn btn-outline-secondary w-50">Volver</a>
+			<a href="index.php" class="btn w-50"><img src="img/icono/volver2.png"></a>
 	</div>
 
 </body>
