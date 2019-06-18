@@ -6,6 +6,7 @@ $(document).ready(function(){
 	var imgItemsI = $('.imgCartelesI li').length;
 	var imgItemsEU = $('.imgCartelesEU li').length;
 	var imgItemsC = $('.imgCartelesC li').length;
+	var imgItemsIns = $('.imgCartelesIns li').length;
 
 	var imgPos = 1;
 
@@ -39,7 +40,36 @@ $(document).ready(function(){
 		return false;
 	});
 
-	//Carteles
+	//Carteles Inicio
+	$('.imgCartelesIns li').hide();
+	$('.imgCartelesIns li:first').show();
+
+	$('.FderechaIns').click(nextSliderIns);
+	$('.FizquierdaIns').click(prevSliderIns);
+
+	function nextSliderIns(){
+		if (imgPos >= imgItemsIns) {
+			imgPos = 1;
+		}else{
+			imgPos++;
+		}
+
+		$('.imgCartelesIns li').hide();
+		$('.imgCartelesIns li:nth-child('+ imgPos +')').fadeIn();
+	}
+
+	function prevSliderIns(){
+		
+		if (imgPos <= 1) {
+			imgPos = imgItemsIns;
+		}else{
+			imgPos--;
+		}
+
+		$('.imgCartelesIns li').hide();
+		$('.imgCartelesIns li:nth-child('+ imgPos +')').fadeIn();
+	}
+
 	//Carteles Africa
 	$('.imgCartelesA li').hide();
 	$('.imgCartelesA li:first').show();

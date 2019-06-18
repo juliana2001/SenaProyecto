@@ -157,6 +157,11 @@ header .menu {
       cursor: pointer; }
     .carteles .flechas .FderechaC {
       cursor: pointer; }
+    .carteles .flechas .FizquierdaIns {
+      margin-right: 8px;
+      cursor: pointer; }
+    .carteles .flechas .FderechaIns {
+      cursor: pointer; }
 
 #inicio {
   overflow-y: hidden; }
@@ -709,5 +714,4 @@ header .menu {
     opacity: 1; }
   100% {
     opacity: 0; } }
-
 /*# sourceMappingURL=estilos.css.map */

@@ -59,11 +59,28 @@
 				<div class="carousel-item" data-interval="2000">
 					<div class="textoRA">
 						<button class="btnDescargar"><a href="RA/BoxLine_RA.apk" download><img src="img/icono/descargar2.png"></a></button>
-					</div> 
+					</div>
+					<!--Carteles-->
+					<div class="carteles">
+						<ul class="imgCartelesIns">
+							<li><img src="img/cartelesInstrucciones/1.png"></li>
+							<li><img src="img/cartelesInstrucciones/2.png"></li>
+							<li><img src="img/cartelesInstrucciones/3.png"></li>
+							<li><img src="img/cartelesInstrucciones/4.png"></li>
+						</ul>
+						<div class="flechas">
+							<div class="FizquierdaIns">
+								<i class="fas fa-chevron-circle-left"></i>
+							</div>
+							<div class="FderechaIns">
+								<i class="fas fa-chevron-circle-right"></i>
+							</div>
+						</div>
+					</div>
 					<img src="img/realidadAinicio.png" class="d-block w-100" alt="realidadAumentada">
 				</div>
 				<div class="carousel-item">
-					<video class="d-block w-100" controls>
+					<video class="d-block w-100" controls poster="img/fondoVideo.jpg">
 						<source src="img/animacionBoxlinePrincipal.mp4" type="video/mp4">
 					</video>
 				</div>
