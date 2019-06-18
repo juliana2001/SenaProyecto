@@ -32,7 +32,7 @@
 	?>
 	<!-- Modal infografia -->
 	<div class="modal fade" id="infografia<?= $fila['idSec']?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog" role="document">
+		<div class="modal-dialog modal-xl" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
 					<h5 class="modal-title" id="exampleModalLabel">Infografia</h5>
@@ -55,7 +55,7 @@
 		while ($fila2 = mysqli_fetch_array($resultado2)) {
 	?>
 	<div class="modal fade" id="personaje<?= $fila2['idSec']?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog" role="document">
+		<div class="modal-dialog modal-xl" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
 					<h5 class="modal-title" id="exampleModalLabel">Personaje</h5>
@@ -80,7 +80,7 @@
 		while ($fila3 = mysqli_fetch_array($resultado3)) {
 	?>
 	<div class="modal fade" id="reglas<?= $fila3['idSec']?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog" role="document">
+		<div class="modal-dialog modal-xl" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
 					<h5 class="modal-title" id="exampleModalLabel">Reglas</h5>
@@ -157,7 +157,7 @@
 			<!--Africa Galeria-->
 			<button type="button" class="btnImplementos" data-toggle="modal" data-target="#implementoAfrica"></button>
 			<div class="modal fade" id="implementoAfrica" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-				<div class="modal-dialog" role="document">
+				<div class="modal-dialog modal-lg" role="document">
 					<div class="modal-content">
 						<div class="modal-header">
 							<h5 class="modal-title" id="exampleModalLabel">Implementos</h5>
@@ -220,7 +220,7 @@
 			<!--Grecia Galeria-->
 			<button type="button" class="btnImplementos" data-toggle="modal" data-target="#implementoGrecia"></button>
 			<div class="modal fade" id="implementoGrecia" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-				<div class="modal-dialog" role="document">
+				<div class="modal-dialog modal-lg" role="document">
 					<div class="modal-content">
 						<div class="modal-header">
 							<h5 class="modal-title" id="exampleModalLabel">Implementos</h5>
@@ -284,7 +284,7 @@
 			<!--Inglaterra Galeria Implementos-->
 			<button type="button" class="btnImplementos" data-toggle="modal" data-target="#implementoInglaterra"></button>
 			<div class="modal fade" id="implementoInglaterra" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-				<div class="modal-dialog" role="document">
+				<div class="modal-dialog modal-lg" role="document">
 					<div class="modal-content">
 						<div class="modal-header">
 							<h5 class="modal-title" id="exampleModalLabel">Implementos</h5>
@@ -351,7 +351,7 @@
 			<!--Estados Unidos Implementos-->
 			<button type="button" class="btnImplementos" data-toggle="modal" data-target="#implementosE"></button>
 			<div class="modal fade" id="implementosE" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-				<div class="modal-dialog" role="document">
+				<div class="modal-dialog modal-lg" role="document">
 					<div class="modal-content">
 						<div class="modal-header">
 							<h5 class="modal-title" id="exampleModalLabel">Implementos</h5>
@@ -442,7 +442,7 @@
 			<!--Galeria Implementos-->
 			<button type="button" class="btnImplementos" data-toggle="modal" data-target="#implementosC"></button>
 			<div class="modal fade" id="implementosC" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-				<div class="modal-dialog" role="document">
+				<div class="modal-dialog modal-lg" role="document">
 					<div class="modal-content">
 						<div class="modal-header">
 							<h5 class="modal-title" id="exampleModalLabel">Implementos</h5>
